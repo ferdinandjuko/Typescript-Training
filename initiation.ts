@@ -1,5 +1,5 @@
 /*declare var $: any; 
-On a crée une type de varaible [PoidD] comporte deux paramètre de type entier (x, y)
+On a crée une type de varaible [Poid2D] comporte deux paramètre de type entier (x, y)
 Donc on peut déclarer une variable de type [Point2D] sans plus mentionner */
 interface	Point2D	{
     x:	number;
@@ -20,11 +20,18 @@ Remarque bien qu'on affecte la valeur dans le x et y comme on a typé leur type 
 var	point2D:	Point2D	=	{	x:	0,	y:	10	}
 
 /*On a déclaré variable point3D de type [Point3D]:
-On affecte valeur par défaut dont (x, y, x) comme on les a typé */
+On affecte valeur par défaut dont (x, y, x) comme on les a typé c-à-d affecté par deux point et suivi par la valeur 
+à stocker  */
 var	point3D:	Point3D	=	{	x:	0,	y:	10,	z:	20	}
+
+/*Declarer fonction qui prend en paramètre une variable de type crée avant la création de la fonction 
+c'est à dire une fonction qui prend en paramètre ni number, ni  bolean et ni string. Plus tôt de type crée d'une façon temporaire
+avant la fonction   */
 function iTakePoint2D(point:	Point2D)	{	/*	do	something	*/	}
 
-
+/*Ici on a déclaré une foncion iTakePoint3D qui prend en paramètre une variable point typé en [Point3D]
+dont nous connaison déjà que c'est une type de variable typé prend en valeur par défaut trois variable de type number qui sont
+(x, y, z)*/
 function iTakePoint3D(point:    Point3D){/* do something*/}
 console.log();
 
@@ -37,19 +44,11 @@ foo = 345;
 $(".awesome").show();
 
 declare var	$:	{
-    (selector:string):	any;
+    (selector:  string):	any;
 };
 $('.awesome').show();	//	Okay!
 $("123").show();	//	Error:	selector	needs	to	be	a	string
 
 //      iTakePoint2D({	x:	0	});	//	Error:	missing	information	`y`
 
-/*
-echo "# Typescript-Training" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:ferdinandjuko/Typescript-Training.git
-git push -u origin main
-*/
+

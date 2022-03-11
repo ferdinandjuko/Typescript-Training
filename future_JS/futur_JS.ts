@@ -1,6 +1,6 @@
 /*import	*	as	deepEqual	from "deepequal";
 import equal from 'fast-deep-equal';*/
-
+/*POO en TS*/
 class	Point	{
     constructor(public	x:	number,	public	y:	number)	{
     }
@@ -18,6 +18,21 @@ console.log("Abscisse de P3 : " + p3.x + " Coordonées de P3 est : " + p3.y + " 
 var	inc	=	x	=>	x+1;
 console.log(" Lovely fat arrow function" + inc);
 
+
+/*Declaration d'un objet Animal*/
+class Animal {
+    constructor(public nom: string, public poids: number, public couleur: string) {
+    }
+    decrireAnimal(){
+        console.log("\nLe "+ this.nom + " est de couleur " + this.couleur + ", pèse environ " + this.poids + "kg\n");
+    }
+}
+var animal1 = new Animal("Chat", 23, "vert");
+var animal2 = new Animal("Loup", 15,"noir");
+
+console.log(animal1.decrireAnimal());
+console.log(animal2.decrireAnimal());
+
 console.log(5	==	5);	//	true			,	TS	Error
 
 console.log({a:123}	==	{a:123});	//	False
@@ -26,11 +41,14 @@ console.log({a:123}	===	{a:123});	/*/	False
 
 console.log(deepEqual({ a:123 },{ a: 123}));
 console.log(deepEqual({ b:"123" }, { b: "123"}));
-*/
+
+
+Objet IdDisplay d'attribut id typé string et display typé string aussi  */
 type	IdDisplay	=	{
     id:	string,
     display:	string
 }
+/**/
 const	list:	IdDisplay[]	=	[
     {
             id:	'foo',
