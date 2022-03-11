@@ -1,15 +1,23 @@
-var point2D = { x: 0, y: 10 };
-var point3D = { x: 0, y: 10, z: 20 };
+//on declare vairable point*    de type Point*D
+var point2D = { x: 3, y: 10 };
+var point3D = { x: 5, y: 10, z: 20 };
 
-function iTakePoint2D(point) {}
+//variable point de type Point2D
+function iTakePoint2D(point) {
+    var subtract = point.y - point.x;
+    console.log("Difference de x et y est:  " + subtract);
+}
 
-function iTakePoint3D(point) {}
+//variable point de type Point3D
+function iTakePoint3D(point) {
+    var somme = (point.x + point.y + point.z);
+    console.log("\nSomme de x, y, z est égal " + somme);
+}
 
-console.log();
-iTakePoint2D(point2D); //	exact	match	okay
-iTakePoint2D(point3D); //	extra	information	okay
+//Appel au fonction iTakePoint*()
+iTakePoint2D(point2D);
+iTakePoint3D(point3D);
 
 var foo = 156;
 foo = 345;
-
-//      iTakePoint2D({	x:	0	});	//	Error:	missing	information	`y`*/
+console.log(foo);
