@@ -10,8 +10,12 @@ interface	Point3D	{
 }
 
 //on declare vairable point*    de type Point*D
-var	point2D:	Point2D	=	{	x:	3,	y:	10	}
-var	point3D:	Point3D	=	{	x:	5,	y:	10,	z:	20	}
+var	point2D:	Point2D	=	{	
+    x:	3,	y:	10	
+}
+var	point3D:	Point3D	=	{
+    	x:	5,	y:	10,	z:	20	
+    }
 
 //variable point de type Point2D
 function iTakePoint2D(point:	Point2D)	{
